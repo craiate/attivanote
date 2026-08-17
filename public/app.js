@@ -58,7 +58,7 @@ async function generateRealContent(query) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                model: "gpt-oss-120b",
+                model: "openai/gpt-oss-120b",
                 messages: [{ role: "user", content: prompt }],
                 temperature: 0.5,
                 response_format: { type: "json_object" }
