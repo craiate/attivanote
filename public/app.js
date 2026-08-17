@@ -33,7 +33,7 @@ const CATEGORY_IMAGES = {
 
 // --- 3. INTELLIGENZA ARTIFICIALE (MOTORE GROQ) ---
 async function generateRealContent(query) {
-    console.log("Richiesta inviata a Groq (Llama 3.3) per:", query); 
+    console.log("Richiesta inviata a Groq (GPT OSS 120B) per:", query); 
 
     const url = "https://api.groq.com/openai/v1/chat/completions";
 
@@ -58,7 +58,7 @@ async function generateRealContent(query) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                model: "llama-3.3-70b-versatile",
+                model: "gpt-oss-120b",
                 messages: [{ role: "user", content: prompt }],
                 temperature: 0.5,
                 response_format: { type: "json_object" }
